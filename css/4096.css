@@ -1,0 +1,82 @@
+* {
+-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+-moz-box-sizing: border-box; /* Firefox, other Gecko */
+box-sizing: border-box;
+}
+
+body {
+  width: auto;
+  height: auto;
+  margin-left: 30%;
+  background-image: url('../backgrounds/wood.jpg');
+}
+
+[name='menu'] {
+  padding: .5em;
+}
+
+.container, .row, .col-* {
+  width: inherit;
+}
+
+#game {
+  
+}
+
+#note {
+  font-size: 1.5em;
+  text-align: left;
+  padding: 1em;
+}
+
+h1 {
+  font-size: 5em;
+}
+
+#score, #best-score{
+  padding-top: 5px;
+  padding-left: 5px;
+  text-align: center;
+  background: AntiqueWhite;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+#score {
+  width: 6em;
+}
+
+#best-score {
+  width: 8em;
+}
+
+#score-value, #best-score-value {
+  font-size: 1.5em;
+}
+
+#newgame {
+  padding-bottom: 1em;
+}
+
+button {
+  background: AntiqueWhite;
+  border: 2px solid black;
+  border-radius: 10px;
+  font-size: 1.5em;
+}
+
+/* ---- grid ---- */
+.grid {
+  background: #CD5C5C;
+  padding-top: 3em;
+  padding-left: 3em;
+  border: 2px solid black;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 10px;
+}
+
+rec, svg {
+  border: 1px solid #333;
+  border-color: hsla(0, 0%, 0%, 0.5);
+  border-radius: 5px;
+}
