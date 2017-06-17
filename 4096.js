@@ -18,6 +18,7 @@ function main() {
     var score = 0;
     var rows = 4;
     var cols = 4;
+    var gameOver = false;
     
     window.onload = function () {
         document.getElementById('newgame-btn').onclick = newGame;
@@ -39,6 +40,7 @@ function main() {
     };
     
     function newGame() {
+        gameOver = false;
         for (i = 0; i < rows ;i++) {
             for (idx = 0; idx < cols ;idx++) {
                 makeTileEmpty(grid[i][idx]);
@@ -147,7 +149,11 @@ function main() {
     function move(event) {
         var x = event.keyCode;
         hasStateChanged = false;
-        
+
+        if (gameOver) {
+            return;
+        }
+
         switch (x) {
             case 37:
                 console.log('left');
@@ -178,9 +184,11 @@ function main() {
         }
 
         if (isGameWon()) {
-            alert("Game Over! you WON!! : )");
+            gameOver = true;
+            setTimeout(function () {alert("Game Over! you WON!! : )");},2000);
         }else if (isGameOver()) {
-            alert("Game Over! you lost");
+            gameOver = true;
+            setTimeout(function () {alert("Game Over! you lost");},2000);
         } else if (hasStateChanged) {
             insertRndNumTile();
         }
